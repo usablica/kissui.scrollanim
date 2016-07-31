@@ -11,7 +11,7 @@ Scrollanim has only one dependecy to [`kissui.position`](https://github.com/usab
 
 Then, simply include `kissui.scrollanim` in your page and write your first awesome scroll animation:
 
-```
+```html
 <p data-kui-anim="fadeIn">Show this with fade-in</p>
 ```
 
