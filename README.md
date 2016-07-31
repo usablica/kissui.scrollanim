@@ -20,5 +20,7 @@ Simple, isn't it?
 # Author
 Afshin Mehrabani
 
+Thanks to Daniel Eden for making [animate.css](https://github.com/daneden/animate.css)
+
 # License
 MIT
