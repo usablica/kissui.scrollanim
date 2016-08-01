@@ -1,0 +1,132 @@
+/**
+ * CSS3 scroll animation
+ *
+ * MIT licensed. By Afshin Mehrabani <afshin.meh@gmail.com>
+ *
+ * This project is a part of Kissui framework.
+ */
+(function (root, factory) {
+  if (typeof define === 'function' && define.amd) {
+    define(['kissuiPosition'], function (kissuiPosition) {
+      return (root.kissuiScrollAnim = factory(kissuiPosition));
+    });
+  } else {
+    root.kissuiScrollAnim = factory(root.kissuiPosition);
+  }
+}(this, function (kissuiPosition) {
+
+  /**
+  * options
+  */
+  var _options = {
+    //trigger the events on module init?
+    triggerOnInit: true,
+    attribute: 'data-kui-anim'
+  };
+
+  /**
+  * To store all available elements with their options
+  */
+  var _elements = [];
+
+  /**
+  * Find elements
+  */
+  function _populate () {
+    //clear old elements first
+    _elements = [];
+
+    var elements = document.querySelectorAll('*[' + _options.attribute + ']');
+
+    for (var i = 0;i < elements.length;i++) {
+      var element = elements[i];
+      var event = element.getAttribute(_options.attribute);
+
+      _add(element, {
+         'in': event
+      });
+    }
+  };
+
+  /**
+  * Adds a new item to _elements array
+  *
+  * Sample event object:
+  * {
+  *   'in': 'fadeIn',
+  *   'out': 'fadeOut'
+  * }
+  *
+  * See kissui.position for more options to bind events.
+  */
+  function _add (element, event) {
+    for (var e in event) {
+      kissuiPosition.add(element, e);
+    }
+
+    // add visibility: hidden to the element
+    element.style.opacity = '0';
+
+    _elements.push({
+      element: element,
+      event: event,
+      active: false
+    });
+  };
+
+  /**
+  * Finds an element by looking into the _elements
+  *
+  */
+  function _find (element) {
+    for (var i = 0;i < _elements.length; i++) {
+      var elx = _elements[i];
+
+      if (element === elx.element) {
+        return elx;
+      }
+    }
+
+    return null;
+  };
+
+  /**
+  * Attaching corresponded css3 class to the element
+  *
+  */
+  function _attach (element, event) {
+    for (var e in element.event) {
+      if (e == event && element.active === false) {
+        element.element.style.opacity = '1';
+        element.element.className += ' animated ' + element.event[e];
+
+        //set this flag to prevent processing same element twice
+        element.active = true;
+
+      }
+    }
+  };
+
+  /**
+  * Start the module
+  */
+  function _init () {
+    _populate.call(this);
+
+    kissuiPosition.on('*', function (element, event) {
+      _attach(_find(element), event);
+    });
+
+    kissuiPosition.init();
+
+  };
+
+  _init()
+
+  return {
+    _options: _options,
+    _elements: _elements,
+    init: _init,
+    add: _add
+  };
+}));
