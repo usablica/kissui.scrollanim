@@ -5,17 +5,118 @@ This library is a part of Kissui project.
 
 # Getting Started
 
-Scrollanim has only one dependecy to [`kissui.position`](https://github.com/usablica/kissui.position) (to detect the position of elements on the page). Install this dependecy using bower, npm or whatever you prefer. It exports AMD and Browser Global object. 
+This projects doesn't have any dependecies. All you need to do is to include the `scrollanim.js` and `scrollanim.css` in your page.
 
 > Please note that you don't need jQuery, Angular.js, React, Whatever. 
 
-Then, simply include `kissui.scrollanim` in your page and write your first awesome scroll animation:
+Write your first awesome scroll animation:
 
 ```html
 <p data-kui-anim="fadeIn">Show this with fade-in</p>
 ```
 
 Simple, isn't it?
+
+# Events
+
+Scrollanim uses [`kissui.position`](https://github.com/usablica/kissui.position) to manage and track elements. Please note that `kissui.position` is a builtin dependency and you don't need to include anything in your page.
+
+`Kissui.position` supports these events:
+
+- `in` - when element is in the viewport
+- `out` - when element is not in the viewport
+- `middle` - center aligned element (vertically)
+- `center` - center aligned element (horizontally)
+- `top` - element at the top of the page
+- `bottom` - elemennt at the bottom of the page
+- `left` - element at the left side of the page
+- `right` - element at the right side of the page
+
+Also, it is possible to use a compond of events together, e.g. `center middle`, `in right` or `out left`. Please check out [`kissui.position`](https://github.com/usablica/kissui.position) for more information.
+
+# Animations
+
+Scrollanim uses Animate.css as a builtin dependency to provide stunnishing animations. 
+
+Here is a list of supported animations:
+* `bounce`
+  * `flash`
+  * `pulse`
+  * `rubberBand`
+  * `shake`
+  * `headShake`
+  * `swing`
+  * `tada`
+  * `wobble`
+  * `jello`
+  * `bounceIn`
+  * `bounceInDown`
+  * `bounceInLeft`
+  * `bounceInRight`
+  * `bounceInUp`
+  * `bounceOut`
+  * `bounceOutDown`
+  * `bounceOutLeft`
+  * `bounceOutRight`
+  * `bounceOutUp`
+  * `fadeIn`
+  * `fadeInDown`
+  * `fadeInDownBig`
+  * `fadeInLeft`
+  * `fadeInLeftBig`
+  * `fadeInRight`
+  * `fadeInRightBig`
+  * `fadeInUp`
+  * `fadeInUpBig`
+  * `fadeOut`
+  * `fadeOutDown`
+  * `fadeOutDownBig`
+  * `fadeOutLeft`
+  * `fadeOutLeftBig`
+  * `fadeOutRight`
+  * `fadeOutRightBig`
+  * `fadeOutUp`
+  * `fadeOutUpBig`
+  * `flipInX`
+  * `flipInY`
+  * `flipOutX`
+  * `flipOutY`
+  * `lightSpeedIn`
+  * `lightSpeedOut`
+  * `rotateIn`
+  * `rotateInDownLeft`
+  * `rotateInDownRight`
+  * `rotateInUpLeft`
+  * `rotateInUpRight`
+  * `rotateOut`
+  * `rotateOutDownLeft`
+  * `rotateOutDownRight`
+  * `rotateOutUpLeft`
+  * `rotateOutUpRight`
+  * `hinge`
+  * `rollIn`
+  * `rollOut`
+  * `zoomIn`
+  * `zoomInDown`
+  * `zoomInLeft`
+  * `zoomInRight`
+  * `zoomInUp`
+  * `zoomOut`
+  * `zoomOutDown`
+  * `zoomOutLeft`
+  * `zoomOutRight`
+  * `zoomOutUp`
+  * `slideInDown`
+  * `slideInLeft`
+  * `slideInRight`
+  * `slideInUp`
+  * `slideOutDown`
+  * `slideOutLeft`
+  * `slideOutRight`
+  * `slideOutUp`
+  
+
+We always keep an up-to-date version on Animate.css. 
 
 # Author
 Afshin Mehrabani
