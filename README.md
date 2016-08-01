@@ -34,6 +34,38 @@ Scrollanim uses [`kissui.position`](https://github.com/usablica/kissui.position)
 
 Also, it is possible to use a compond of events together, e.g. `center middle`, `in right` or `out left`. Please check out [`kissui.position`](https://github.com/usablica/kissui.position) for more information.
 
+It is possible to use both `data-kui-anim` attribute and `kissuiScrollAnim.add(element, event)` to bind an element and reveal it after scrolling but please note that `data-kui-anim` attribute uses `in` event of `kissui.position` by default.
+
+An example of adding an element using the API:
+
+```javascript
+kissuiScrollAnim.add(element, {
+  'in': 'fadeIn'
+});
+```
+
+Or
+
+```javascript
+kissuiScrollAnim.add(element, {
+  'center middle': 'fadeIn'
+});
+```
+
+Or
+
+
+```javascript
+kissuiScrollAnim.add(element, {
+  'center middle': 'fadeIn',
+  'out': 'fadeOut'
+});
+```
+
+Super cool.
+
+<img width=200 src='http://adorablekittens.com/wp-content/uploads/2015/09/supercoolcat.jpg' />
+
 # Animations
 
 Scrollanim uses Animate.css as a builtin dependency to provide stunnishing animations. 
