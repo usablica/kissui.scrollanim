@@ -18,12 +18,17 @@
     "kissui"
   ],
   "dependencies": {
-      "kissui.position": "^0.1.0"
+    "kissui.position": "^0.1.0"
   },
   "author": "Afshin Mehrabani",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/usablica/kissui.scrollanim/issues"
   },
-  "homepage": "https://github.com/usablica/kissui.scrollanim#readme"
+  "homepage": "https://github.com/usablica/kissui.scrollanim#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-uglify": "^2.0.0"
+  }
 }
