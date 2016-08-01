@@ -1,5 +1,4 @@
 module.exports = function(grunt) {
-
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -17,13 +16,21 @@ module.exports = function(grunt) {
         src: './build/scrollanim.js',
         dest: 'build/scrollanim.min.js'
       }
+    },
+    cssmin: {
+      target: {
+        files: {
+          './build/scrollanim.min.css': ['./scrollanim.css']
+        }
+      }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
 
   // Default task(s).
-  grunt.registerTask('default', ['concat', 'uglify']);
+  grunt.registerTask('default', ['cssmin', 'concat', 'uglify']);
 
 };
