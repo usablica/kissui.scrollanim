@@ -8,68 +8,119 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="./css/kissui.css">
+  <link rel="stylesheet" href="./css/custom.css">
   <link rel="stylesheet" href="../build/scrollanim.min.css">
   <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
 </head>
 <body>
+    <div class="container">
+        <div class="row">
+            <div data-kui-anim="fadeIn" class="one-half column scrollanim custom-column" style="margin-top: 30%;">
+                <h4>Hello World.</h4>
+
+                <p><b>Scrollanim</b> is a CSS3 and JavaScript library to create stunning scroll animations that work everywhere.</p>
+
+                <p>It's open-source (MIT), free and easy to use <i class="fa fa-heart" style="color: #D81818;"></i> Oh, and it's <b>1KB</b>.</p>
+
+                <p>
+                <a class="github-button" href="https://github.com/usablica/kissui.scrollanim" data-icon="octicon-star" data-count-href="/usablica/kissui.scrollanim/stargazers" data-count-api="/repos/usablica/kissui.scrollanim#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star usablica/kissui.scrollanim on GitHub">Star</a>
+                <a class="github-button" href="https://github.com/usablica/kissui.scrollanim/fork" data-icon="octicon-repo-forked" data-count-href="/usablica/kissui.scrollanim/network" data-count-api="/repos/usablica/kissui.scrollanim#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork usablica/kissui.scrollanim on GitHub">Fork</a>
+                </p>
+
+                <p>Want to see a <a href="javascript:void(0);">demo</a>? Ok, keep scrolling.</p>
+            </div>
+        </div>
+    </div>
+
+
   <div class="container">
     <div class="row">
-      <div data-kui-anim="fadeIn" class="one-half column scrollanim" style="margin-top: 25%;">
-        <h4>Hello World.</h4>
+      <div data-kui-anim="fadeIn" class="one-half column custom-column" style="margin-top: 25%;">
+        <h4>Easy to use</h4>
 
-        <p>This page is a "Hello World" of <b>Kissui</b> with the basic CSS files and fonts. You can simply edit this page to start your awesome work. If you need some help hit up the <a href="http://www.kissui.io">Kissui documentation</a>.</p>
+        <p><b>Scrollanim</b> has many builtin CSS3 animations to use. All you need to do is to add <code>data-kui-anim</code> attribute to your elements.</p>
+
+        <pre style="text-align: left;"> 
+            <code>&lt;div data-kui-anim=&quot;fadeIn&quot;&gt;
+  Show this with a fadeIn animation.
+&lt;/div&gt;</code>
+        </pre>
+
+        <p style="text-align: left;">Cool, isn't it?</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div data-kui-anim="rubberBand" class="one-half column custom-column" style="margin-top: 25%;">
+        <h4>Advanced mode</h4>
+
+        <p style="text-align: left;">Also, this is possible to add the animations using the JavaScript API.</p>
+
+        <pre style="text-align: left;"> 
+            <code>kissuiScrollAnim.add(element, {
+  'in': 'fadeIn',
+  'out': 'fadeOut'
+});</code>
+        </pre>
+
+        <p style="text-align: left;"><b>Scrolanim</b> supports all available positions for an element on the page. Also, you can use a compound event name (e.g. <code>in center middle</code>)</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div data-kui-anim="bounce" class="one-half column custom-column" style="margin-top: 25%;">
+        <h4>CSS3 Animations</h4>
+
+        <p><b>Scrolanim</b> has many CSS3 animations to use. No JavaScript animations, better performance.</p>
+
+        <p>Works on desktop and portable devices perfectly.</p>
       </div>
     </div>
 
 
     <div class="row">
-      <div data-kui-anim="fadeIn" class="one-half column" style="margin-top: 25%;">
-        <h4>Hello World.</h4>
+      <div data-kui-anim="infinite pulse" class="one-half column custom-column" style="margin-top: 25%;">
+        <h4>Infinite animation</h4>
 
-        <p>This page is a "Hello World" of <b>Kissui</b> with the basic CSS files and fonts. You can simply edit this page to start your awesome work. If you need some help hit up the <a href="http://www.kissui.io">Kissui documentation</a>.</p>
+        <p>Also, animations names accept an optional parameter <code>infinite</code> to repeat the animation forever.</p>
       </div>
     </div>
 
 
     <div class="row">
-      <div data-kui-anim="rubberBand" class="one-half column" style="margin-top: 25%;">
-        <h4>Hello World.</h4>
+      <div class="one-half column custom-column" style="margin-top: 25%;" id="specialelement">
+        <h4>Perfect event control</h4>
 
-        <p>This page is a "Hello World" of <b>Kissui</b> with the basic CSS files and fonts. You can simply edit this page to start your awesome work. If you need some help hit up the <a href="http://www.kissui.io">Kissui documentation</a>.</p>
-      </div>
-    </div>
+        <p><b>Scrollanim</b> controls all elements with an extra care. You can attach events to almost all possible positions of an element on the page.</p>
 
-
-
-    <div class="row">
-      <div data-kui-anim="bounce" class="one-half column" style="margin-top: 25%;">
-        <h4>Hello World.</h4>
-
-        <p>This page is a "Hello World" of <b>Kissui</b> with the basic CSS files and fonts. You can simply edit this page to start your awesome work. If you need some help hit up the <a href="http://www.kissui.io">Kissui documentation</a>.</p>
+        <p>For instance, this element appears with a <code>fadeIn</code> animation but also gets a <code>pulse</code> animations when it's in the middle of the page.</p>
       </div>
     </div>
 
 
     <div class="row">
-      <div data-kui-anim="shake" class="one-half column" style="margin-top: 25%;">
-        <h4>Hello World.</h4>
+        <div data-kui-anim="bounceIn" class="one-half column custom-column" style="margin-top: 25%;margin-bottom: 25%;" id="lastone">
+            <h4><i class="fa fa-heart" style="color: #D81818;"></i> Did you enjoy?</h4>
 
-        <p>This page is a "Hello World" of <b>Kissui</b> with the basic CSS files and fonts. You can simply edit this page to start your awesome work. If you need some help hit up the <a href="http://www.kissui.io">Kissui documentation</a>.</p>
-      </div>
-    </div>
+            <p>That's great, we are glad you liked it. The next step is to use the CDN networks or download the project. Meanwhile, you can have a look at the <a href="https://github.com/usablica/kissui.scrollanim" target="_blank">documentation</a> page.</p>
 
-
-    <div class="row">
-      <div data-kui-anim="fadeIn" class="one-half column" style="margin-top: 25%;" id="lastone">
-        <h4>Hello World.</h4>
-
-        <p>This page is a "Hello World" of <b>Kissui</b> with the basic CSS files and fonts. You can simply edit this page to start your awesome work. If you need some help hit up the <a href="http://www.kissui.io">Kissui documentation</a>.</p>
-      </div>
+            <a class="github-button" href="https://github.com/usablica/kissui.scrollanim" data-icon="octicon-star" data-count-href="/usablica/kissui.scrollanim/stargazers" data-count-api="/repos/usablica/kissui.scrollanim#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star usablica/kissui.scrollanim on GitHub">Star</a>
+            <a class="github-button" href="https://github.com/usablica/kissui.scrollanim/fork" data-icon="octicon-repo-forked" data-count-href="/usablica/kissui.scrollanim/network" data-count-api="/repos/usablica/kissui.scrollanim#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork usablica/kissui.scrollanim on GitHub">Fork</a>
+        </div>
     </div>
 
   </div>
 
   <script src='../build/scrollanim.js'></script>
+  <script>
+    kissuiScrollAnim.add(document.getElementById('specialelement'), {
+        'in': 'fadeIn',
+        'middle': 'pulse'
+    });
+  </script>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
 </body>
 </html>
 

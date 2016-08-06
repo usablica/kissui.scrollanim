@@ -1,0 +1,6 @@
+.column.custom-column {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
