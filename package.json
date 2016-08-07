@@ -1,6 +1,6 @@
 {
   "name": "kissui.scrollanim",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "CSS3 scroll animation library",
   "main": "index.js",
   "scripts": {
