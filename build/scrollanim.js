@@ -370,7 +370,7 @@
       var event = element.getAttribute(_options.attribute);
 
       _add(element, {
-         'in': event
+        'in': event
       });
     }
   };
@@ -387,8 +387,16 @@
   * See kissui.position for more options to bind events.
   */
   function _add (element, event) {
+    var eventObj = {};
+
     for (var e in event) {
       kissuiPosition.add(element, e);
+
+      eventObj[e] = {
+        animation: event[e],
+        // adding active flag
+        active: false
+      };
     }
 
     // add visibility: hidden to the element
@@ -396,8 +404,7 @@
 
     _elements.push({
       element: element,
-      event: event,
-      active: false
+      event: eventObj
     });
   };
 
@@ -423,14 +430,46 @@
   */
   function _attach (element, event) {
     for (var e in element.event) {
-      if (e == event && element.active === false) {
-        element.element.style.opacity = '1';
-        element.element.className += ' animated ' + element.event[e];
+      if (e == event && element.event[e].active === false) {
 
-        //set this flag to prevent processing same element twice
-        element.active = true;
+        element.element.style.opacity = '1';
+        element.element.className += ' animated ' + element.event[e].animation;
+
+
+        (function (element, e) {
+          _addEventListener(element.element, [
+            'webkitAnimationEnd',
+            'mozAnimationEnd',
+            'MSAnimationEnd',
+            'oanimationend',
+            'animationend'], function () {
+              element.element.className = element.element.className.replace('animated ' + element.event[e].animation, '');
+
+              //set this flag to prevent processing same element twice
+              element.event[e].active = true;
+            });
+        }(element, e));
 
       }
+    }
+  };
+
+  /**
+  * To bind an event to browser
+  *
+  */
+  function _addEventListener (element, event, fn) {
+    // is event an array?
+    if (typeof (event) == 'object') {
+      for (var i = 0; i < event.length;i++) {
+        _addEventListener(element, event[i], fn);
+      }
+    }
+
+    if (element.addEventListener) { // modern browsers including IE9+
+      element.addEventListener(event, fn, false);
+    } else if (element.attachEvent) { // IE8 and below
+      element.attachEvent('on' + event, fn);
     }
   };
 
@@ -445,7 +484,6 @@
     });
 
     kissuiPosition.init();
-
   };
 
   _init()
