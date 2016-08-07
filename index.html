@@ -1,218 +1,205 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Kissui.scrollanim by usablica</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Kissui.scrollanim: Hello world</title>
+  <meta name="description" content="Kissui.scrollanim Hello World page">
+  <meta name="author" content="Afshin Mehrabani (afshin.meh@gmail.com)">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="./css/kissui.css">
+  <link rel="stylesheet" href="./css/custom.css">
+  <link rel="stylesheet" href="../build/scrollanim.min.css">
+  <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div data-kui-anim="fadeIn" class="one-half column scrollanim custom-column" style="margin-top: 30%;">
+                <h4>Hello World.</h4>
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-light.css">
-    <meta name="viewport" content="width=device-width">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Kissui.scrollanim</h1>
-        <p>CSS3 scroll animation library</p>
+                <p><b>Scrollanim</b> is a CSS3 and JavaScript library to create stunning scroll animations that work everywhere.</p>
 
-        <p class="view"><a href="https://github.com/usablica/kissui.scrollanim">View the Project on GitHub <small>usablica/kissui.scrollanim</small></a></p>
+                <p>It's open-source (MIT), free and easy to use <i class="fa fa-heart" style="color: #D81818;"></i> Oh, and it's <b>1KB</b>.</p>
+
+                <p>
+                <a class="github-button" href="https://github.com/usablica/kissui.scrollanim" data-icon="octicon-star" data-count-href="/usablica/kissui.scrollanim/stargazers" data-count-api="/repos/usablica/kissui.scrollanim#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star usablica/kissui.scrollanim on GitHub">Star</a>
+                <a class="github-button" href="https://github.com/usablica/kissui.scrollanim/fork" data-icon="octicon-repo-forked" data-count-href="/usablica/kissui.scrollanim/network" data-count-api="/repos/usablica/kissui.scrollanim#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork usablica/kissui.scrollanim on GitHub">Fork</a>
+                </p>
+
+                <p>
+                <!-- Sharingbutton Facebook -->
+                <a class="resp-sharing-button__link" href="https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fgithub.com%2Fusablica%2Fkissui.scrollanim" target="_blank" aria-label="">
+                  <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+                    <svg version="1.1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+                        <g>
+                            <path d="M18.768,7.465H14.5V5.56c0-0.896,0.594-1.105,1.012-1.105s2.988,0,2.988,0V0.513L14.171,0.5C10.244,0.5,9.5,3.438,9.5,5.32 v2.145h-3v4h3c0,5.212,0,12,0,12h5c0,0,0-6.85,0-12h3.851L18.768,7.465z"/>
+                        </g>
+                    </svg>
+                    </div>
+                  </div>
+                </a>
+
+                <!-- Sharingbutton Twitter -->
+                <a class="resp-sharing-button__link" href="https://twitter.com/intent/tweet/?text=Scrollanim%20-%20Simple%20and%20easy%20to%20use%20CSS3%20scroll%20animation&amp;url=https%3A%2F%2Fgithub.com%2Fusablica%2Fkissui.scrollanim" target="_blank" aria-label="">
+                  <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+                    <svg version="1.1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+                        <g>
+                            <path d="M23.444,4.834c-0.814,0.363-1.5,0.375-2.228,0.016c0.938-0.562,0.981-0.957,1.32-2.019c-0.878,0.521-1.851,0.9-2.886,1.104 C18.823,3.053,17.642,2.5,16.335,2.5c-2.51,0-4.544,2.036-4.544,4.544c0,0.356,0.04,0.703,0.117,1.036 C8.132,7.891,4.783,6.082,2.542,3.332C2.151,4.003,1.927,4.784,1.927,5.617c0,1.577,0.803,2.967,2.021,3.782 C3.203,9.375,2.503,9.171,1.891,8.831C1.89,8.85,1.89,8.868,1.89,8.888c0,2.202,1.566,4.038,3.646,4.456 c-0.666,0.181-1.368,0.209-2.053,0.079c0.579,1.804,2.257,3.118,4.245,3.155C5.783,18.102,3.372,18.737,1,18.459 C3.012,19.748,5.399,20.5,7.966,20.5c8.358,0,12.928-6.924,12.928-12.929c0-0.198-0.003-0.393-0.012-0.588 C21.769,6.343,22.835,5.746,23.444,4.834z"/>
+                        </g>
+                    </svg>
+                    </div>
+                  </div>
+                </a>
+
+                <!-- Sharingbutton Google+ -->
+                <a class="resp-sharing-button__link" href="https://plus.google.com/share?url=https%3A%2F%2Fgithub.com%2Fusablica%2Fkissui.scrollanim" target="_blank" aria-label="">
+                  <div class="resp-sharing-button resp-sharing-button--google resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+                    <svg version="1.1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+                        <g>
+                            <path d="M11.366,12.928c-0.729-0.516-1.393-1.273-1.404-1.505c0-0.425,0.038-0.627,0.988-1.368 c1.229-0.962,1.906-2.228,1.906-3.564c0-1.212-0.37-2.289-1.001-3.044h0.488c0.102,0,0.2-0.033,0.282-0.091l1.364-0.989 c0.169-0.121,0.24-0.338,0.176-0.536C14.102,1.635,13.918,1.5,13.709,1.5H7.608c-0.667,0-1.345,0.118-2.011,0.347 c-2.225,0.766-3.778,2.66-3.778,4.605c0,2.755,2.134,4.845,4.987,4.91c-0.056,0.22-0.084,0.434-0.084,0.645 c0,0.425,0.108,0.827,0.33,1.216c-0.026,0-0.051,0-0.079,0c-2.72,0-5.175,1.334-6.107,3.32C0.623,17.06,0.5,17.582,0.5,18.098 c0,0.501,0.129,0.984,0.382,1.438c0.585,1.046,1.843,1.861,3.544,2.289c0.877,0.223,1.82,0.335,2.8,0.335 c0.88,0,1.718-0.114,2.494-0.338c2.419-0.702,3.981-2.482,3.981-4.538C13.701,15.312,13.068,14.132,11.366,12.928z M3.66,17.443 c0-1.435,1.823-2.693,3.899-2.693h0.057c0.451,0.005,0.892,0.072,1.309,0.2c0.142,0.098,0.28,0.192,0.412,0.282 c0.962,0.656,1.597,1.088,1.774,1.783c0.041,0.175,0.063,0.35,0.063,0.519c0,1.787-1.333,2.693-3.961,2.693 C5.221,20.225,3.66,19.002,3.66,17.443z M5.551,3.89c0.324-0.371,0.75-0.566,1.227-0.566l0.055,0 c1.349,0.041,2.639,1.543,2.876,3.349c0.133,1.013-0.092,1.964-0.601,2.544C8.782,9.589,8.363,9.783,7.866,9.783H7.865H7.844 c-1.321-0.04-2.639-1.6-2.875-3.405C4.836,5.37,5.049,4.462,5.551,3.89z"/>
+                            <polygon points="23.5,9.5 20.5,9.5 20.5,6.5 18.5,6.5 18.5,9.5 15.5,9.5 15.5,11.5 18.5,11.5 18.5,14.5 20.5,14.5 20.5,11.5  23.5,11.5 	"/>
+                        </g>
+                    </svg>
+                    </div>
+                  </div>
+                </a>
+                </p>
 
 
-        <ul>
-          <li><a href="https://github.com/usablica/kissui.scrollanim/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/usablica/kissui.scrollanim/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/usablica/kissui.scrollanim">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h1>
-<a id="kissuiscrollanim" class="anchor" href="#kissuiscrollanim" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>kissui.scrollanim</h1>
-
-<p>CSS3 scroll animation library</p>
-
-<p>This library is a part of Kissui project.</p>
-
-<h1>
-<a id="getting-started" class="anchor" href="#getting-started" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Getting Started</h1>
-
-<p>This projects doesn't have any dependecies. All you need to do is to include the <code>scrollanim.js</code> and <code>scrollanim.css</code> in your page.</p>
-
-<blockquote>
-<p>Please note that you don't need jQuery, Angular.js, React, Whatever. </p>
-</blockquote>
-
-<p>Write your first awesome scroll animation:</p>
-
-<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">p</span> <span class="pl-e">data-kui-anim</span>=<span class="pl-s"><span class="pl-pds">"</span>fadeIn<span class="pl-pds">"</span></span>&gt;Show this with fade-in&lt;/<span class="pl-ent">p</span>&gt;</pre></div>
-
-<p>Simple, isn't it?</p>
-
-<h1>
-<a id="events" class="anchor" href="#events" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Events</h1>
-
-<p>Scrollanim uses <a href="https://github.com/usablica/kissui.position"><code>kissui.position</code></a> to manage and track elements. Please note that <code>kissui.position</code> is a builtin dependency and you don't need to include anything in your page.</p>
-
-<p><code>Kissui.position</code> supports these events:</p>
-
-<ul>
-<li>
-<code>in</code> - when element is in the viewport</li>
-<li>
-<code>out</code> - when element is not in the viewport</li>
-<li>
-<code>middle</code> - center aligned element (vertically)</li>
-<li>
-<code>center</code> - center aligned element (horizontally)</li>
-<li>
-<code>top</code> - element at the top of the page</li>
-<li>
-<code>bottom</code> - elemennt at the bottom of the page</li>
-<li>
-<code>left</code> - element at the left side of the page</li>
-<li>
-<code>right</code> - element at the right side of the page</li>
-</ul>
-
-<p>Also, it is possible to use a compond of events together, e.g. <code>center middle</code>, <code>in right</code> or <code>out left</code>. Please check out <a href="https://github.com/usablica/kissui.position"><code>kissui.position</code></a> for more information.</p>
-
-<p>It is possible to use both <code>data-kui-anim</code> attribute and <code>kissuiScrollAnim.add(element, event)</code> to bind an element and reveal it after scrolling but please note that <code>data-kui-anim</code> attribute uses <code>in</code> event of <code>kissui.position</code> by default.</p>
-
-<p>An example of adding an element using the API:</p>
-
-<div class="highlight highlight-source-js"><pre><span class="pl-smi">kissuiScrollAnim</span>.<span class="pl-c1">add</span>(element, {
-  <span class="pl-s"><span class="pl-pds">'</span>in<span class="pl-pds">'</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>fadeIn<span class="pl-pds">'</span></span>
-});</pre></div>
-
-<p>Or</p>
-
-<div class="highlight highlight-source-js"><pre><span class="pl-smi">kissuiScrollAnim</span>.<span class="pl-c1">add</span>(element, {
-  <span class="pl-s"><span class="pl-pds">'</span>center middle<span class="pl-pds">'</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>fadeIn<span class="pl-pds">'</span></span>
-});</pre></div>
-
-<p>Or</p>
-
-<div class="highlight highlight-source-js"><pre><span class="pl-smi">kissuiScrollAnim</span>.<span class="pl-c1">add</span>(element, {
-  <span class="pl-s"><span class="pl-pds">'</span>center middle<span class="pl-pds">'</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>fadeIn<span class="pl-pds">'</span></span>,
-  <span class="pl-s"><span class="pl-pds">'</span>out<span class="pl-pds">'</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>fadeOut<span class="pl-pds">'</span></span>
-});</pre></div>
-
-<p>Super cool.</p>
-
-<p><img width="200" src="http://adorablekittens.com/wp-content/uploads/2015/09/supercoolcat.jpg"></p>
-
-<h1>
-<a id="animations" class="anchor" href="#animations" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Animations</h1>
-
-<p>Scrollanim uses Animate.css as a builtin dependency to provide stunnishing animations. </p>
-
-<p>Here is a list of supported animations:</p>
-
-<ul>
-<li>
-<code>bounce</code>
-
-<ul>
-<li><code>flash</code></li>
-<li><code>pulse</code></li>
-<li><code>rubberBand</code></li>
-<li><code>shake</code></li>
-<li><code>headShake</code></li>
-<li><code>swing</code></li>
-<li><code>tada</code></li>
-<li><code>wobble</code></li>
-<li><code>jello</code></li>
-<li><code>bounceIn</code></li>
-<li><code>bounceInDown</code></li>
-<li><code>bounceInLeft</code></li>
-<li><code>bounceInRight</code></li>
-<li><code>bounceInUp</code></li>
-<li><code>bounceOut</code></li>
-<li><code>bounceOutDown</code></li>
-<li><code>bounceOutLeft</code></li>
-<li><code>bounceOutRight</code></li>
-<li><code>bounceOutUp</code></li>
-<li><code>fadeIn</code></li>
-<li><code>fadeInDown</code></li>
-<li><code>fadeInDownBig</code></li>
-<li><code>fadeInLeft</code></li>
-<li><code>fadeInLeftBig</code></li>
-<li><code>fadeInRight</code></li>
-<li><code>fadeInRightBig</code></li>
-<li><code>fadeInUp</code></li>
-<li><code>fadeInUpBig</code></li>
-<li><code>fadeOut</code></li>
-<li><code>fadeOutDown</code></li>
-<li><code>fadeOutDownBig</code></li>
-<li><code>fadeOutLeft</code></li>
-<li><code>fadeOutLeftBig</code></li>
-<li><code>fadeOutRight</code></li>
-<li><code>fadeOutRightBig</code></li>
-<li><code>fadeOutUp</code></li>
-<li><code>fadeOutUpBig</code></li>
-<li><code>flipInX</code></li>
-<li><code>flipInY</code></li>
-<li><code>flipOutX</code></li>
-<li><code>flipOutY</code></li>
-<li><code>lightSpeedIn</code></li>
-<li><code>lightSpeedOut</code></li>
-<li><code>rotateIn</code></li>
-<li><code>rotateInDownLeft</code></li>
-<li><code>rotateInDownRight</code></li>
-<li><code>rotateInUpLeft</code></li>
-<li><code>rotateInUpRight</code></li>
-<li><code>rotateOut</code></li>
-<li><code>rotateOutDownLeft</code></li>
-<li><code>rotateOutDownRight</code></li>
-<li><code>rotateOutUpLeft</code></li>
-<li><code>rotateOutUpRight</code></li>
-<li><code>hinge</code></li>
-<li><code>rollIn</code></li>
-<li><code>rollOut</code></li>
-<li><code>zoomIn</code></li>
-<li><code>zoomInDown</code></li>
-<li><code>zoomInLeft</code></li>
-<li><code>zoomInRight</code></li>
-<li><code>zoomInUp</code></li>
-<li><code>zoomOut</code></li>
-<li><code>zoomOutDown</code></li>
-<li><code>zoomOutLeft</code></li>
-<li><code>zoomOutRight</code></li>
-<li><code>zoomOutUp</code></li>
-<li><code>slideInDown</code></li>
-<li><code>slideInLeft</code></li>
-<li><code>slideInRight</code></li>
-<li><code>slideInUp</code></li>
-<li><code>slideOutDown</code></li>
-<li><code>slideOutLeft</code></li>
-<li><code>slideOutRight</code></li>
-<li><code>slideOutUp</code></li>
-</ul>
-</li>
-</ul>
-
-<p>We always keep an up-to-date version on Animate.css. </p>
-
-<h1>
-<a id="author" class="anchor" href="#author" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Author</h1>
-
-<p>Afshin Mehrabani</p>
-
-<p>Thanks to Daniel Eden for making <a href="https://github.com/daneden/animate.css">animate.css</a></p>
-
-<h1>
-<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h1>
-
-<p>MIT</p>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/usablica">usablica</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
+                <p>Want to see a <a href="javascript:void(0);">demo</a>? Ok, keep scrolling.</p>
+            </div>
+        </div>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
-  </body>
+
+
+  <div class="container">
+    <div class="row">
+      <div data-kui-anim="fadeIn" class="one-half column custom-column" style="margin-top: 25%;">
+        <h4>Easy to use</h4>
+
+        <p><b>Scrollanim</b> has many builtin CSS3 animations to use. All you need to do is to add <code>data-kui-anim</code> attribute to your elements.</p>
+
+        <pre style="text-align: left;"> 
+            <code>&lt;div data-kui-anim=&quot;fadeIn&quot;&gt;
+  Show this with a fadeIn animation.
+&lt;/div&gt;</code>
+        </pre>
+
+        <p style="text-align: left;">Cool, isn't it?</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div data-kui-anim="rubberBand" class="one-half column custom-column" style="margin-top: 25%;">
+        <h4>Advanced mode</h4>
+
+        <p style="text-align: left;">Also, this is possible to add the animations using the JavaScript API.</p>
+
+        <pre style="text-align: left;"> 
+            <code>kissuiScrollAnim.add(element, {
+  'in': 'fadeIn',
+  'out': 'fadeOut'
+});</code>
+        </pre>
+
+        <p style="text-align: left;"><b>Scrolanim</b> supports all available positions for an element on the page. Also, you can use a compound event name (e.g. <code>in center middle</code>)</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div data-kui-anim="bounce" class="one-half column custom-column" style="margin-top: 25%;">
+        <h4>CSS3 Animations</h4>
+
+        <p><b>Scrolanim</b> has many CSS3 animations to use. No JavaScript animations, better performance.</p>
+
+        <p>Works on desktop and portable devices perfectly.</p>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div data-kui-anim="infinite pulse" class="one-half column custom-column" style="margin-top: 25%;">
+        <h4>Infinite animation</h4>
+
+        <p>Also, animations names accept an optional parameter <code>infinite</code> to repeat the animation forever.</p>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="one-half column custom-column" style="margin-top: 25%;" id="specialelement">
+        <h4>Perfect event control</h4>
+
+        <p><b>Scrollanim</b> controls all elements with an extra care. You can attach events to almost all possible positions of an element on the page.</p>
+
+        <p>For instance, this element appears with a <code>fadeIn</code> animation but also gets a <code>pulse</code> animations when it's in the middle of the page.</p>
+      </div>
+    </div>
+
+
+    <div class="row">
+        <div data-kui-anim="bounceIn" class="one-half column custom-column" style="margin-top: 25%;margin-bottom: 25%;" id="lastone">
+            <h4><i class="fa fa-heart" style="color: #D81818;"></i> Did you enjoy?</h4>
+
+            <p>That's great, we are glad you liked it. The next step is to use the CDN networks or download the project. Meanwhile, you can have a look at the <a href="https://github.com/usablica/kissui.scrollanim" target="_blank">documentation</a> page.</p>
+
+            <a class="github-button" href="https://github.com/usablica/kissui.scrollanim" data-icon="octicon-star" data-count-href="/usablica/kissui.scrollanim/stargazers" data-count-api="/repos/usablica/kissui.scrollanim#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star usablica/kissui.scrollanim on GitHub">Star</a>
+            <a class="github-button" href="https://github.com/usablica/kissui.scrollanim/fork" data-icon="octicon-repo-forked" data-count-href="/usablica/kissui.scrollanim/network" data-count-api="/repos/usablica/kissui.scrollanim#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork usablica/kissui.scrollanim on GitHub">Fork</a>
+
+            <p>
+            <!-- Sharingbutton Facebook -->
+            <a class="resp-sharing-button__link" href="https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fgithub.com%2Fusablica%2Fkissui.scrollanim" target="_blank" aria-label="">
+              <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+                <svg version="1.1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+                    <g>
+                        <path d="M18.768,7.465H14.5V5.56c0-0.896,0.594-1.105,1.012-1.105s2.988,0,2.988,0V0.513L14.171,0.5C10.244,0.5,9.5,3.438,9.5,5.32 v2.145h-3v4h3c0,5.212,0,12,0,12h5c0,0,0-6.85,0-12h3.851L18.768,7.465z"/>
+                    </g>
+                </svg>
+                </div>
+              </div>
+            </a>
+
+            <!-- Sharingbutton Twitter -->
+            <a class="resp-sharing-button__link" href="https://twitter.com/intent/tweet/?text=Scrollanim%20-%20Simple%20and%20easy%20to%20use%20CSS3%20scroll%20animation&amp;url=https%3A%2F%2Fgithub.com%2Fusablica%2Fkissui.scrollanim" target="_blank" aria-label="">
+              <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+                <svg version="1.1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+                    <g>
+                        <path d="M23.444,4.834c-0.814,0.363-1.5,0.375-2.228,0.016c0.938-0.562,0.981-0.957,1.32-2.019c-0.878,0.521-1.851,0.9-2.886,1.104 C18.823,3.053,17.642,2.5,16.335,2.5c-2.51,0-4.544,2.036-4.544,4.544c0,0.356,0.04,0.703,0.117,1.036 C8.132,7.891,4.783,6.082,2.542,3.332C2.151,4.003,1.927,4.784,1.927,5.617c0,1.577,0.803,2.967,2.021,3.782 C3.203,9.375,2.503,9.171,1.891,8.831C1.89,8.85,1.89,8.868,1.89,8.888c0,2.202,1.566,4.038,3.646,4.456 c-0.666,0.181-1.368,0.209-2.053,0.079c0.579,1.804,2.257,3.118,4.245,3.155C5.783,18.102,3.372,18.737,1,18.459 C3.012,19.748,5.399,20.5,7.966,20.5c8.358,0,12.928-6.924,12.928-12.929c0-0.198-0.003-0.393-0.012-0.588 C21.769,6.343,22.835,5.746,23.444,4.834z"/>
+                    </g>
+                </svg>
+                </div>
+              </div>
+            </a>
+
+            <!-- Sharingbutton Google+ -->
+            <a class="resp-sharing-button__link" href="https://plus.google.com/share?url=https%3A%2F%2Fgithub.com%2Fusablica%2Fkissui.scrollanim" target="_blank" aria-label="">
+              <div class="resp-sharing-button resp-sharing-button--google resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+                <svg version="1.1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+                    <g>
+                        <path d="M11.366,12.928c-0.729-0.516-1.393-1.273-1.404-1.505c0-0.425,0.038-0.627,0.988-1.368 c1.229-0.962,1.906-2.228,1.906-3.564c0-1.212-0.37-2.289-1.001-3.044h0.488c0.102,0,0.2-0.033,0.282-0.091l1.364-0.989 c0.169-0.121,0.24-0.338,0.176-0.536C14.102,1.635,13.918,1.5,13.709,1.5H7.608c-0.667,0-1.345,0.118-2.011,0.347 c-2.225,0.766-3.778,2.66-3.778,4.605c0,2.755,2.134,4.845,4.987,4.91c-0.056,0.22-0.084,0.434-0.084,0.645 c0,0.425,0.108,0.827,0.33,1.216c-0.026,0-0.051,0-0.079,0c-2.72,0-5.175,1.334-6.107,3.32C0.623,17.06,0.5,17.582,0.5,18.098 c0,0.501,0.129,0.984,0.382,1.438c0.585,1.046,1.843,1.861,3.544,2.289c0.877,0.223,1.82,0.335,2.8,0.335 c0.88,0,1.718-0.114,2.494-0.338c2.419-0.702,3.981-2.482,3.981-4.538C13.701,15.312,13.068,14.132,11.366,12.928z M3.66,17.443 c0-1.435,1.823-2.693,3.899-2.693h0.057c0.451,0.005,0.892,0.072,1.309,0.2c0.142,0.098,0.28,0.192,0.412,0.282 c0.962,0.656,1.597,1.088,1.774,1.783c0.041,0.175,0.063,0.35,0.063,0.519c0,1.787-1.333,2.693-3.961,2.693 C5.221,20.225,3.66,19.002,3.66,17.443z M5.551,3.89c0.324-0.371,0.75-0.566,1.227-0.566l0.055,0 c1.349,0.041,2.639,1.543,2.876,3.349c0.133,1.013-0.092,1.964-0.601,2.544C8.782,9.589,8.363,9.783,7.866,9.783H7.865H7.844 c-1.321-0.04-2.639-1.6-2.875-3.405C4.836,5.37,5.049,4.462,5.551,3.89z"/>
+                        <polygon points="23.5,9.5 20.5,9.5 20.5,6.5 18.5,6.5 18.5,9.5 15.5,9.5 15.5,11.5 18.5,11.5 18.5,14.5 20.5,14.5 20.5,11.5  23.5,11.5 	"/>
+                    </g>
+                </svg>
+                </div>
+              </div>
+            </a>
+            </p>
+        </div>
+    </div>
+
+  </div>
+
+  <script src='../build/scrollanim.js'></script>
+  <script>
+    kissuiScrollAnim.add(document.getElementById('specialelement'), {
+        'in': 'fadeIn',
+        'middle': 'pulse'
+    });
+  </script>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+</body>
 </html>
+
