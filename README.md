@@ -28,7 +28,7 @@ Scrollanim uses [`kissui.position`](https://github.com/usablica/kissui.position)
 - `middle` - center aligned element (vertically)
 - `center` - center aligned element (horizontally)
 - `top` - element at the top of the page
-- `bottom` - elemennt at the bottom of the page
+- `bottom` - element at the bottom of the page
 - `left` - element at the left side of the page
 - `right` - element at the right side of the page
 
