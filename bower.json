@@ -1,6 +1,6 @@
 {
   "name": "kissui.scrollanim",
-  "homepage": "https://github.com/usablica/kissui.scrollanim",
+  "homepage": "http://scrollanim.kissui.io",
   "authors": [
     "Afshin Mehrabani <afshin.meh@gmail.com>"
   ],
@@ -27,6 +27,6 @@
     "tests"
   ],
   "dependencies": {
-    "kissui.position": "^0.2.0"
+    "kissui.position": "latest"
   }
 }

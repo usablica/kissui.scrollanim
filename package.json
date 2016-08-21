@@ -1,6 +1,6 @@
 {
   "name": "kissui.scrollanim",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "CSS3 scroll animation library",
   "main": "index.js",
   "scripts": {
@@ -25,7 +25,7 @@
   "bugs": {
     "url": "https://github.com/usablica/kissui.scrollanim/issues"
   },
-  "homepage": "https://github.com/usablica/kissui.scrollanim#readme",
+  "homepage": "http://scrollanim.kissui.io",
   "devDependencies": {
     "grunt": "^1.0.1",
     "grunt-contrib-concat": "^1.0.1",
