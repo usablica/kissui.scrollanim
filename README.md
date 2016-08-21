@@ -3,6 +3,23 @@ CSS3 scroll animation library
 
 This library is a part of Kissui project.
 
+# Install
+
+## Bower
+
+You can use bower to install the package:
+
+```
+bower install kissui.scrollanim
+```
+
+## CDN
+
+Not available yet. We will update this section as soon as possible.
+
+## Manually
+You can also download and include files manually from the latest [releases](https://github.com/usablica/kissui.scrollanim/releases).
+
 # Getting Started
 
 This projects doesn't have any dependecies. All you need to do is to include the `scrollanim.js` and `scrollanim.css` in your page.
@@ -28,7 +45,7 @@ Scrollanim uses [`kissui.position`](https://github.com/usablica/kissui.position)
 - `middle` - center aligned element (vertically)
 - `center` - center aligned element (horizontally)
 - `top` - element at the top of the page
-- `bottom` - elemennt at the bottom of the page
+- `bottom` - element at the bottom of the page
 - `left` - element at the left side of the page
 - `right` - element at the right side of the page
 
