@@ -19,10 +19,14 @@
   */
   var _elements = [];
 
-    /**
+  /**
   * EventListener
   */
   var _events = [];
+
+  // scroll positions to calc the delta variable in _position function
+  var _scrollTop = null;
+  var _scrollLeft = null;
 
   /**
   * options
@@ -125,6 +129,20 @@
     }
   };
 
+  function _between (n, pos, delta) {
+    if (delta > 0) {
+      if (pos < n && n < (pos + delta)) {
+        return true;
+      }
+    } else {
+      if (pos > n && n > (pos + delta)) {
+        return true;
+      }
+    }
+
+    return false;
+  };
+
   /**
   * Check a single element position and return the correct event name
   *
@@ -149,6 +167,9 @@
     // to get the width of viewport WITHOUT scrollbar
     var width = document.body.clientWidth || document.documentElement.clientWidth;
 
+    var topDelta = document.body.scrollTop - _scrollTop;
+    var leftDelta = document.body.scrollLeft - _scrollLeft;
+
     // check `in` event
     if (elementEvents.indexOf('in') > -1) {
      if (top >= 0 && left >= 0 && bottom <= height && right <= width) {
@@ -172,7 +193,7 @@
 
     // check `top` event
     if (elementEvents.indexOf('top') > -1) {
-     if (top == 0) {
+     if (top == 0 || _between(0, top, topDelta)) {
        trigger = trigger && true;
      } else {
        trigger = false;
@@ -181,7 +202,7 @@
 
     // check `left` event
     if (elementEvents.indexOf('left') > -1) {
-     if (left == 0) {
+     if (left == 0 || _between(0, left, leftDelta)) {
        trigger = trigger && true;
      } else {
        trigger = false;
@@ -190,7 +211,7 @@
 
     // check `right` event
     if (elementEvents.indexOf('right') > -1) {
-     if (right == width) {
+     if (right == width || _between(width, right, leftDelta)) {
        trigger = trigger && true;
      } else {
        trigger = false;
@@ -199,7 +220,7 @@
 
     // check `bottom` event
     if (elementEvents.indexOf('bottom') > -1) {
-     if (bottom == height) {
+     if (bottom == height || _between(height, bottom, topDelta)) {
        trigger = trigger && true;
      } else {
        trigger = false;
@@ -208,7 +229,7 @@
 
     // check `middle` event
     if (elementEvents.indexOf('middle') > -1) {
-      if (top + (elementHeight / 2) == (height / 2)) {
+      if (top + (elementHeight / 2) == (height / 2) || _between((height / 2), top + (elementHeight / 2), topDelta)) {
        trigger = trigger && true;
      } else {
        trigger = false;
@@ -217,7 +238,7 @@
 
     // check `center` event
     if (elementEvents.indexOf('center') > -1) {
-     if (left + (elementWidth / 2) == (width / 2)) {
+     if (left + (elementWidth / 2) == (width / 2) || _between((width / 2), left + (elementWidth / 2), leftDelta)) {
        trigger = trigger && true;
      } else {
        trigger = false;
@@ -241,6 +262,9 @@
     for (var i = 0; i < elements.length; i++) {
       _position.call(this, elements[i].element, elements[i].event);
     };
+
+    _scrollTop = document.body.scrollTop;
+    _scrollLeft = document.body.scrollLeft;
   };
 
   /**
@@ -299,6 +323,9 @@
   * Start the module
   */
   function _init () {
+    _scrollTop = document.body.scrollTop;
+    _scrollLeft = document.body.scrollLeft;
+
     _populate.call(this);
 
     if (_options.triggerOnInit == true) {
