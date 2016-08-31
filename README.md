@@ -15,7 +15,8 @@ bower install kissui.scrollanim
 
 ## CDN
 
-Not available yet. We will update this section as soon as possible.
+You can use **cdnjs**: https://cdnjs.com/libraries/kissui.scrollanim
+
 
 ## Manually
 You can also download and include files manually from the latest [releases](https://github.com/usablica/kissui.scrollanim/releases).
