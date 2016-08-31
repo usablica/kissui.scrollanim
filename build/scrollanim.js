@@ -373,9 +373,18 @@
   * options
   */
   var _options = {
-    //trigger the events on module init?
+    // trigger the events on module init?
     triggerOnInit: true,
-    attribute: 'data-kui-anim'
+    // prefix for all `data-...` attributes
+    attributePrefix: 'data-kui-',
+    animAttribute: 'anim',
+    // when to trigger the animation?
+    eventAttribute: 'event',
+    // default event to trigger
+    defaultEvent: 'in',
+    // reset the animation event after element is out of the viewport?
+    // enabling this option triggers the event each time it appears in the viewport
+    autoReset: true
   };
 
   /**
@@ -384,21 +393,31 @@
   var _elements = [];
 
   /**
+  * Get the attribute name
+  *
+  */
+  function __(name) {
+    return _options.attributePrefix + name;
+  };
+
+  /**
   * Find elements
   */
   function _populate () {
     //clear old elements first
     _elements = [];
 
-    var elements = document.querySelectorAll('*[' + _options.attribute + ']');
+    var elements = document.querySelectorAll('*[' + __(_options.animAttribute) + ']');
 
     for (var i = 0;i < elements.length;i++) {
+      var param = {};
       var element = elements[i];
-      var event = element.getAttribute(_options.attribute);
+      var anim = element.getAttribute(__(_options.animAttribute));
+      var event = element.getAttribute(__(_options.eventAttribute)) || 'in';
 
-      _add(element, {
-        'in': event
-      });
+      param[event] = anim;
+
+      _add(element, param);
     }
   };
 
@@ -425,6 +444,8 @@
         active: false
       };
     }
+
+    kissuiPosition.add(element, 'out');
 
     // add visibility: hidden to the element
     element.style.opacity = '0';
@@ -501,6 +522,37 @@
   };
 
   /**
+  * Clear animation, reset `opacity` and `active` flag on an element
+  *
+  */
+  function _resetElement (element) {
+    var elx = _find(element)
+
+    for (var e in elx.event) {
+      elx.event[e].active = false;
+    }
+
+    element.style.opacity = 0;
+  };
+
+  /**
+  * Set option
+  *
+  */
+  function _setOption (name, value) {
+    _options[name] = value;
+  };
+
+  /**
+  * Set an object of options
+  */
+  function _setOptions (options) {
+    for (var o in options) {
+      _setOption(o, options[o]);
+    }
+  };
+
+  /**
   * Start the module
   */
   function _init () {
@@ -508,6 +560,13 @@
 
     kissuiPosition.on('*', function (element, event) {
       _attach(_find(element), event);
+    });
+
+    // to manage `autoReset`
+    kissuiPosition.on('out', function (element) {
+      if (_options.autoReset) {
+        _resetElement(element);
+      }
     });
 
     kissuiPosition.init();
@@ -519,6 +578,8 @@
     _options: _options,
     _elements: _elements,
     init: _init,
-    add: _add
+    add: _add,
+    setOption: _setOption,
+    setOptions: _setOptions
   };
 }));
