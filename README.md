@@ -40,7 +40,7 @@ Need more help? have a look at `/example` folder in the project OR http://scroll
 
 # Adding animations
 
-You can add animations using `data-kui-...` attributes **or** programmatiaclly using the `kissuiScrollAnim.add` method.
+You can add animations using `data-kui-...` attributes **or** programmatiaclly using the `kissuiScrollAnim.add` method. Read following sections for more details.
 
 ## `data-kui` attributes
 
@@ -65,12 +65,12 @@ kissuiScrollAnim.add(element, {
 
 There are some options to define the default values in Scrollanim.
 
-`triggerOnInit`: Trigger the events on module init (automatically after page load)?. Default is `true`.
-`attributePrefix`: Prefix for all `data-...` attributes. Default is `data-kui-`.
-`animAttribute`: Name of animation attribute. Default is `anim`
-`eventAttribute`: Event attribute name. Default is `event`
-`defaultEvent`: Default event to trigger when `data-kui-event` is not provided. Default is `in`
-`autoReset`: Reset the animation event after element is out of the viewport?. Defualt is `true`
+  - `triggerOnInit`: Trigger the events on module init (automatically after page load)?. Default is `true`.
+  - `attributePrefix`: Prefix for all `data-...` attributes. Default is `data-kui-`.
+  - `animAttribute`: Name of animation attribute. Default is `anim`
+  - `eventAttribute`: Event attribute name. Default is `event`
+  - `defaultEvent`: Default event to trigger when `data-kui-event` is not provided. Default is `in`
+  - `autoReset`: Reset the animation event after element is out of the viewport?. Defualt is `true`
 
 To alter event you can use `setOption` or `setOptions` methods:
 
