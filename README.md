@@ -33,7 +33,33 @@ Write your first awesome scroll animation:
 <p data-kui-anim="fadeIn">Show this with fade-in</p>
 ```
 
-Simple, isn't it?
+Simple, isn't it?   
+
+Need more help? have a look at `/example` folder in the project OR http://scrollanim.kissui.io
+
+
+# Adding animations
+
+You can add animations using `data-kui-...` attributes **or** programmatiaclly using the `kissuiScrollAnim.add` method.
+
+## `data-kui` attributes
+
+Currently we have two attributes to define the options:
+
+  - `data-kui-anim`: Mandatory. Animation name. see [Animations](#animations) section.
+  - `data-kui-event`: Option to define the event to trigger. see [Events](#events) section. Default is `in`.
+
+## Programmatically (JSON)
+
+Also, you can use the `kissuiScrollAnim.add` method to add the animations.
+
+Example:
+
+```javascript
+kissuiScrollAnim.add(element, {
+  'in': 'fadeIn'
+});
+```
 
 # Events
 
