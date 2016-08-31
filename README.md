@@ -49,6 +49,12 @@ Currently we have two attributes to define the options:
   - `data-kui-anim`: Mandatory. Animation name. see [Animations](#animations) section.
   - `data-kui-event`: Option to define the event to trigger. see [Events](#events) section. Default is `in`.
 
+Example:   
+
+```html
+<div data-kui-anim="fadeIn" data-kui-event="top">
+```
+
 ## Programmatically (JSON)
 
 Also, you can use the `kissuiScrollAnim.add` method to add the animations.
