@@ -61,6 +61,32 @@ kissuiScrollAnim.add(element, {
 });
 ```
 
+# Options
+
+There are some options to define the default values in Scrollanim.
+
+`triggerOnInit`: Trigger the events on module init (automatically after page load)?. Default is `true`.
+`attributePrefix`: Prefix for all `data-...` attributes. Default is `data-kui-`.
+`animAttribute`: Name of animation attribute. Default is `anim`
+`eventAttribute`: Event attribute name. Default is `event`
+`defaultEvent`: Default event to trigger when `data-kui-event` is not provided. Default is `in`
+`autoReset`: Reset the animation event after element is out of the viewport?. Defualt is `true`
+
+To alter event you can use `setOption` or `setOptions` methods:
+
+```javascript
+kissuiScrollAnim.setOption('autoReset', false)
+```
+
+or
+
+```javascript
+kissuiScrollAnim.setOptions({ 
+  'autoReset': false,
+  'triggerOnInit': false
+})
+```
+
 # Events
 
 Scrollanim uses [`kissui.position`](https://github.com/usablica/kissui.position) to manage and track elements. Please note that `kissui.position` is a builtin dependency and you don't need to include anything in your page.
